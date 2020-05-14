@@ -1,0 +1,8 @@
+1. If auto changed things at run-time it would take away a major benefit
+of static languages that will reduce the risk of having to deal with
+run time error.  (since run time error is harder to test for this having the
+option to declare things const for example that will throw us a compile time
+error if we acidentally change them) 
+
+Having auto a compile time feauture will give us more confidence that we did 
+not by mistake attempt to store something that we did not mean to.

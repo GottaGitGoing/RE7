@@ -1,0 +1,27 @@
+// **NOTE**: assumption is that they are seperate so no redefinition
+1.
+int sum = 0;
+for (std::vector<int>::iterator i = numbers.begin(); i!=numbers.end(); i++)
+{
+    sum+= *i;
+}
+
+2.
+int list_sum = 0;
+
+for (std::list<int>::iterator i = numbers.begin(); i!=numbers.end(); i++)
+{
+    list_sum += *i;
+}
+
+    The body of the for loop is the same, however the initialization process of
+    the vector and the list are different ( different type declarations), even
+    though both use the ::iterator ( each has its own implementation)
+
+    SOLUTION: to make the two for loops look the same we would use the
+    ---->  auto <---- keyword. auto determines the type declaration by 
+    looking at the vector that its going to operate on and do the adjusments
+    "auto"matically.
+
+   for (auto i = numbers.begin(); i != numbers.end(); i++)
+   { sum += *i;}
