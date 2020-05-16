@@ -1,0 +1,27 @@
+1. Called the derived classes foo() without the virtual keyword
+
+2. Called the derived classes foo() 
+
+3. Called the derived classes foo() 
+
+4. Called the derived class's foo() // I don't understand why it keeps calling the derived class. I
+expected a different behavior each time.
+
+5. It gives me an error that override will only work with virtual member functions. Which makes sense, since override explains the relationship between the virtual functions not the regular ones.
+
+__________________________________________________________________________________________________
+
+6. Called the derived classes goo() when called without virtual keyword
+
+7. Called the derived classes goo() when called with the virtual keyword
+
+8. It gives me an error saying that only virtual member can be marked with override
+
+9. WHOOHOO!!!! Different behavior. When i called goo() but misspelled goo() in my derived class it 
+called the Parent class. This makes sense since compiler looks for goo() in derrived class, can't
+find it in the child so it goes to child's parent and uses the goo() defined in there and calls the 
+parent. 
+
+10. It gives me an error that the misspeled goo() is marked override but it dones't override any member
+function. This again makes sense since the override works with having the virtual defintion next to
+the parent as well.
